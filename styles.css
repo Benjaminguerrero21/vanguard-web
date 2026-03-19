@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR PRO */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: transparent;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: black;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1520975922284-9b62e2f5c3d5') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.overlay {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.overlay h2 {
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+
+/* BOTÓN PRO */
+button {
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #c19b3b, #f5d06f);
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    background: #111;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 40px;
+    color: #c19b3b;
+}
+
+/* FAQ PRO */
+.faq {
+    padding: 80px;
+}
+
+.faq-item button {
+    width: 100%;
+    padding: 15px;
+    background: #111;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-item p {
+    display: none;
+    padding: 10px;
+    background: #1a1a1a;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .overlay h2 {
+        font-size: 40px;
+    }
+}
+
+.cursos {
+    padding: 80px;
+    text-align: center;
+    background: #0f0f0f;
+}
+
+.curso {
+    background: #1a1a1a;
+    padding: 30px;
+    margin: 20px;
+    border-left: 5px solid #c19b3b;
+}
+
+
+.contacto {
+    padding: 80px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    padding: 15px;
+    border: none;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
